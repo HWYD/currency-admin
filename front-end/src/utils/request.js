@@ -2,7 +2,7 @@
  * axios二次封装
  */
  import axios from 'axios'
- import config from './../config'
+ import config from '../config'
  import { ElMessage } from 'element-plus'
  import router from './../router'
  import storage from './storage'
@@ -29,7 +29,7 @@
      const { code, data, msg } = res.data;
      if (code === 200) {
          return data;
-     } else if (code === 500001) {
+     } else if (code === 50001) {
          ElMessage.error(TOKEN_INVALID)
          setTimeout(() => {
              router.push('/login')
